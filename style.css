@@ -211,9 +211,9 @@ section h2:hover::after {
 }
 
 .about-text p {
-    text-align: justify;       /* Aligns both left and right edges */
-    text-justify: inter-word;  /* Ensures proper spacing between words */
-    margin-bottom: 15px;       /* Adds spacing between paragraphs */
+    text-align: justify;       
+    text-justify: inter-word;  
+    margin-bottom: 15px;       
 }
 
 
@@ -251,6 +251,103 @@ section h2:hover::after {
 .contact-card a:hover {
   color: #60a5fa;
   text-decoration: underline;
+}
+
+
+.modal-content {
+  background-color: #1e293b;
+  margin: 60px auto;        
+  padding: 30px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 800px;
+  color: #f5f7fa;
+  position: relative;
+
+
+  max-height: none;         
+  overflow: visible;        
+}
+
+
+.modal-content {
+  background-color: #1e293b;
+  padding: 30px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 800px;
+  color: #f5f7fa;
+  position: relative;
+
+
+  max-height: 85vh;       
+  overflow-y: auto;       
+}
+
+
+.close {
+  color: #f5f7fa;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #2563eb;
+}
+
+.modal-images img {
+  max-width: 420px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+
+
+.modal-images img {
+  max-width: 480px;       /* slightly smaller */
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+
+
+
+.modal-images img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+}
+
+.project-card {
+  background: #1e293b;
+  padding: 30px;
+  padding-bottom: 60px; 
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+  width: 400px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative; 
+}
+
+.click-show-more {
+  position: absolute;      
+  bottom: 20px;            
+  right: 20px;             
+  font-weight: 600;
+  color: #60a5fa;
+  cursor: default;
+  font-size: 0.95rem;
+  transition: color 0.3s;
+}
+
+.click-show-more:hover {
+  color: #2563eb;
 }
 
 footer {

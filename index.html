@@ -5,44 +5,102 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Melchor S. Espinosa III | Software Engineer</title>
 
-<!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  
-  
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
-  
   <link rel="stylesheet" href="style.css" />
+
+  <style>
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 2000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow-y: auto;
+      background-color: rgba(0,0,0,0.8);
+      padding: 40px 0;
+    }
+
+    .modal-content {
+      background-color: #1e293b;
+      margin: auto;
+      padding: 30px;
+      border-radius: 20px;
+      width: 90%;
+      max-width: 900px;
+      color: #f5f7fa;
+      position: relative;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+
+    .close {
+      color: #f5f7fa;
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .close:hover {
+      color: #2563eb;
+    }
+
+    .modal-images {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .modal-image-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .modal-image-title {
+      margin-bottom: 10px;
+      font-weight: 600;
+      font-size: 1rem;
+      text-align: center;
+    }
+
+    .modal-images img {
+      max-width: 300px;
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    
+    .project-card {
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
 
-  
-  <nav>
-    <h2>Melchor S. Espinosa III</h2>
-    <ul>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
- 
   <header class="hero">
     <div class="hero-content" data-aos="fade-up">
-      <h1>Aspiring Software Engineer</h1>
+      <h1>Melchor S. Espinosa III</h1>
+      <h2>Aspiring Software Engineer</h2>
       <p>I build web applications using modern technologies.</p>
-      <a href="#projects" class="btn">View My Work</a>
     </div>
   </header>
 
-  
   <section id="about-me" data-aos="fade-up">
     <h2>About Me</h2>
     <div class="about-me-content">
       <img src="images/graduation.jpg" alt="Graduation Photo" class="about-img" />
       <div class="about-text">
         <p>
-          I am a Bachelor of Science in Computer Engineering graduate with a strong
+          I am a Bachelor of Science in Computer Engineering graduated in Mapúa Malayan Colleges Laguna with a strong
           foundation in software development, data structures, and system design.
           I am passionate about building practical, user-focused applications and
           continuously improving my technical skills through hands-on projects.
@@ -70,66 +128,60 @@
   <section id="projects">
     <h2 data-aos="fade-up">Projects</h2>
     <div class="projects-grid">
+      
       <div class="project-card" data-aos="fade-up">
-      <h3>Detecting Hematological Disorders Using Machine Learning</h3>
+        <h3>Detecting Hematological Disorders Using Machine Learning</h3>
+        <p class="project-role">
+          <strong>Role:</strong> Thesis Researcher & Software Developer
+        </p>
+        <p>
+          A machine learning–based diagnostic support system designed to assist in the
+          detection of hematological disorders, particularly anemia, through automated
+          analysis of blood smear images.
+        </p>
+        <p><strong>Objectives:</strong></p>
+        <ul>
+          <li>Automate blood smear image analysis</li>
+          <li>Assist in early detection of hematological disorders</li>
+          <li>Reduce manual workload and subjectivity in microscopic analysis</li>
+        </ul>
+        <p><strong>Key Features:</strong></p>
+        <ul>
+          <li>Blood smear image preprocessing and enhancement</li>
+          <li>Red blood cell (RBC) segmentation and isolation</li>
+          <li>Automated RBC counting using hemocytometer images</li>
+          <li>CNN-based classification of hematological conditions</li>
+          <li>Model evaluation using accuracy and validation metrics</li>
+        </ul>
+        <p><strong>Methodology:</strong></p>
+        <ul>
+          <li>Image acquisition from microscope and public datasets</li>
+          <li>Preprocessing using OpenCV techniques</li>
+          <li>Feature extraction from RBC morphology</li>
+          <li>Training and validation of CNN models</li>
+        </ul>
+        <p><strong>Tools & Technologies Used:</strong></p>
+        <p>
+          Python, OpenCV, TensorFlow, Keras, NumPy, Convolutional Neural Networks (CNN),
+          Image Processing
+        </p>
+        <p><em>
+          This undergraduate thesis demonstrates the practical application of machine
+          learning and computer vision in healthcare diagnostics.
+        </em></p>
+        <p class="click-show-more">Click to show more</p>
 
-      <p class="project-role">
-        <strong>Role:</strong> Thesis Researcher & Software Developer
-      </p>
+      </div>
 
-      <p>
-        A machine learning–based diagnostic support system designed to assist in the
-        detection of hematological disorders, particularly anemia, through automated
-        analysis of blood smear images.
-      </p>
-
-      <p><strong>Objectives:</strong></p>
-      <ul>
-        <li>Automate blood smear image analysis</li>
-        <li>Assist in early detection of hematological disorders</li>
-        <li>Reduce manual workload and subjectivity in microscopic analysis</li>
-      </ul>
-
-      <p><strong>Key Features:</strong></p>
-      <ul>
-        <li>Blood smear image preprocessing and enhancement</li>
-        <li>Red blood cell (RBC) segmentation and isolation</li>
-        <li>Automated RBC counting using hemocytometer images</li>
-        <li>CNN-based classification of hematological conditions</li>
-        <li>Model evaluation using accuracy and validation metrics</li>
-      </ul>
-
-      <p><strong>Methodology:</strong></p>
-      <ul>
-        <li>Image acquisition from microscope and public datasets</li>
-        <li>Preprocessing using OpenCV techniques</li>
-        <li>Feature extraction from RBC morphology</li>
-        <li>Training and validation of CNN models</li>
-      </ul>
-
-      <p><strong>Tools & Technologies Used:</strong></p>
-      <p>
-        Python, OpenCV, TensorFlow, Keras, NumPy, Convolutional Neural Networks (CNN),
-        Image Processing
-      </p>
-
-      <p><em>
-        This undergraduate thesis demonstrates the practical application of machine
-        learning and computer vision in healthcare diagnostics.
-      </em></p>
-    </div>
-
-
+      
       <div class="project-card" data-aos="fade-up">
         <h3>School Banking Application System</h3>
         <p class="project-role"><strong>Role:</strong> Software Developer (Academic Project)</p>
-
         <p>
           A desktop-based banking application developed as part of a school project.
           The system simulates real-world banking operations, allowing users to manage
           accounts, perform secure transactions, and maintain protected financial data.
         </p>
-
         <p><strong>Key Features:</strong></p>
         <ul>
           <li>User registration and secure authentication</li>
@@ -138,111 +190,68 @@
           <li>Parent and child account linkage for dependent accounts</li>
           <li>Transaction validation and account relationship handling</li>
         </ul>
-
         <p><strong>Security & Data Handling:</strong></p>
         <ul>
           <li>Passwords are securely hashed before storage</li>
           <li>SQL database structured for data integrity and privacy</li>
           <li>Protection of sensitive user and financial information</li>
         </ul>
-
         <p>
           <strong>Technologies Used:</strong> C#, SQL, Object-Oriented Programming (OOP),
           Secure Authentication, Relational Database Design
         </p>
+        <p><em>
+          This project was developed for academic purposes and does not represent
+          a production banking system.
+        </em></p>
+        <p class="click-show-more">Click to show more</p>
 
-        <p>
-          <em>
-            This project was developed for academic purposes and does not represent
-            a production banking system.
-          </em>
-        </p>
       </div>
 
-
+      
       <div class="project-card" data-aos="fade-up">
         <h3>BookOn – Full-Stack Appointment Booking System</h3>
         <p class="project-role">
           <strong>Role:</strong> Software Engineer Intern (Frontend & Backend)
-            </p>
+        </p>
+        <p>
+          BookOn is a full-stack web-based appointment booking system developed during my
+          On-the-Job Training (OJT). The system was designed to streamline service scheduling
+          by allowing users to book appointments online while enabling service providers
+          to manage availability, appointments, and customer information efficiently.
+        </p>
+        <p><strong>Core System Features:</strong></p>
+        <ul>
+          <li>User registration and secure login</li>
+          <li>Service browsing and appointment booking workflow</li>
+          <li>Appointment scheduling and status management</li>
+          <li>Backend API integration for real-time data handling</li>
+          <li>Email and notification-ready architecture</li>
+        </ul>
+        <p><strong>Technologies Used:</strong></p>
+        <p>
+          Java, Spring Boot, Vue.js, REST API, MySQL, Git, GitHub
+        </p>
+        <p><em>
+          Source code is not publicly available due to company confidentiality and NDA policies.
+        </em></p>  
+        <p class="click-show-more">Click to show more</p>
 
-            <p>
-              BookOn is a full-stack web-based appointment booking system developed during my
-              On-the-Job Training (OJT). The system was designed to streamline service scheduling
-              by allowing users to book appointments online while enabling service providers
-              to manage availability, appointments, and customer information efficiently.
-            </p>
-
-            <p><strong>Key Responsibilities & Contributions:</strong></p>
-            <ul>
-              <li>Developed responsive frontend interfaces using <strong>Vue.js</strong> and modern UI components</li>
-              <li>Integrated frontend features with backend services via <strong>RESTful APIs</strong></li>
-              <li>Implemented user authentication and session handling</li>
-              <li>Worked with relational databases to store and manage user, service, and appointment data</li>
-              <li>Handled form validation, error handling, and user feedback for a smooth booking experience</li>
-              <li>Collaborated with senior developers and followed agile development practices</li>
-            </ul>
-
-            <p><strong>Core System Features:</strong></p>
-            <ul>
-              <li>User registration and secure login</li>
-              <li>Service browsing and appointment booking workflow</li>
-              <li>Appointment scheduling and status management</li>
-              <li>Backend API integration for real-time data handling</li>
-              <li>Email and notification-ready architecture</li>
-            </ul>
-
-            <p><strong>Technologies Used:</strong></p>
-            <p>
-              Java, Spring Boot, Vue.js, REST API, MySQL, Git, GitHub
-            </p>
-
-            <p>
-              <em>
-                Source code is not publicly available due to company confidentiality and NDA policies.
-              </em>
-            </p>  
-        </div>
+      </div>
     </div>
   </section>
 
   <section id="skills" data-aos="fade-up">
     <h2>Skills</h2>
-
     <div class="skills">
-      <span>HTML5</span>
-      <span>CSS3</span>
-      <span>JavaScript</span>
-      <span>Vue.js</span>
-      <span>Responsive Web Design</span>
-
-      <span>Java</span>
-      <span>Spring Boot</span>
-      <span>RESTful API Development</span>
-
-      <span>C#</span>
-      <span>.NET Fundamentals</span>
-
-      <span>SQL</span>
-      <span>MySQL</span>
-      <span>Database Design</span>
-
-      <span>Authentication & Authorization</span>
-      <span>Password Hashing</span>
-
-      <span>Python</span>
-      <span>OpenCV</span>
-      <span>TensorFlow</span>
-      <span>CNN</span>
-      <span>Image Processing</span>
-
-      <span>Git</span>
-      <span>GitHub</span>
-      <span>Version Control</span>
-
-      <span>Problem Solving</span>
-      <span>Debugging</span>
-      <span>Agile Collaboration</span>
+      <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Vue.js</span><span>Responsive Web Design</span>
+      <span>Java</span><span>Spring Boot</span><span>RESTful API Development</span>
+      <span>C#</span><span>.NET Fundamentals</span>
+      <span>SQL</span><span>MySQL</span><span>Database Design</span>
+      <span>Authentication & Authorization</span><span>Password Hashing</span>
+      <span>Python</span><span>OpenCV</span><span>TensorFlow</span><span>CNN</span><span>Image Processing</span>
+      <span>Git</span><span>GitHub</span><span>Version Control</span>
+      <span>Problem Solving</span><span>Debugging</span><span>Agile Collaboration</span>
     </div>
   </section>
 
@@ -265,10 +274,103 @@
     <p>© 2025 Melchor S. Espinosa III</p>
   </footer>
 
-  <!-- AOS JS -->
+  
+  <div id="projectModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3 id="modal-title">Project Title</h3>
+      <p id="modal-role"><strong>Role:</strong></p>
+      <p id="modal-description">Project description goes here.</p>
+      <div id="modal-images" class="modal-images"></div>
+    </div>
+  </div>
+
+  
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init({ duration: 1000 });
   </script>
+
+ 
+  <script>
+    const modal = document.getElementById('projectModal');
+    const modalTitle = document.getElementById('modal-title');
+    const modalRole = document.getElementById('modal-role');
+    const modalDescription = document.getElementById('modal-description');
+    const modalImages = document.getElementById('modal-images');
+    const closeBtn = document.querySelector('.close');
+
+    function truncateText(text, maxLength = 250) {
+      return text.length > maxLength ? text.substring(0, maxLength) + '...' : text;
+    }
+
+    document.querySelectorAll('.project-card').forEach(card => {
+      const descP = card.querySelector('p:nth-of-type(2)');
+      const fullText = descP.innerText;
+      const previewText = truncateText(fullText);
+
+      if(fullText.length > previewText.length) descP.innerText = previewText;
+
+      card.addEventListener('click', () => {
+        modalTitle.innerText = card.querySelector('h3').innerText;
+        modalRole.innerHTML = card.querySelector('.project-role').innerHTML;
+        modalDescription.innerText = fullText;
+
+        const title = modalTitle.innerText;
+        modalImages.innerHTML = '';
+        let images = [];
+
+        if(title.includes('School Banking')) {
+          images = [
+            {src: 'images/login.png', title: 'Login Page'},
+            {src: 'images/register.png', title: 'Register Page'},
+            {src: 'images/balance.png', title: 'Balance Page'},
+            {src: 'images/deposit.png', title: 'Deposit Page'},
+            {src: 'images/withdraw.png', title: 'Withdraw Page'}
+          ];
+        } else if(title.includes('Hematological')) {
+          images = [
+            {src: 'images/prototype.jpg', title: 'Biosensor'},
+            {src: 'images/info.jpg', title: 'Information'},
+            {src: 'images/detection.jpg', title: 'Anemia Detection UI'},
+            {src: 'images/results.jpg', title: 'Results'}
+          ];
+
+        } else if(title.includes('BookOn')) {
+          images = [
+            {src: 'images/service.png', title: 'Service Details'},
+            {src: 'images/appointment.png', title: 'Booking of Appointment'},
+            {src: 'images/appointments.png', title: 'Appointments'},
+            {src: 'images/calendar.png', title: 'Calendar Integration'}
+          ];
+        }
+
+        images.forEach(imgObj => {
+          const wrapper = document.createElement('div');
+          wrapper.className = 'modal-image-wrapper';
+
+          const imgTitle = document.createElement('p');
+          imgTitle.className = 'modal-image-title';
+          imgTitle.innerText = imgObj.title;
+
+          const img = document.createElement('img');
+          img.src = imgObj.src;
+          img.alt = imgObj.title;
+
+          wrapper.appendChild(imgTitle);
+          wrapper.appendChild(img);
+          modalImages.appendChild(wrapper);
+        });
+
+        modal.style.display = 'block';
+      });
+    });
+
+    closeBtn.onclick = () => modal.style.display = 'none';
+    window.onclick = (e) => { if(e.target === modal) modal.style.display = 'none'; };
+  </script>
+
+  
+
 </body>
 </html>
