@@ -210,6 +210,13 @@ section h2:hover::after {
   color: #f5f7fa;
 }
 
+.about-text p {
+    text-align: justify;       /* Aligns both left and right edges */
+    text-justify: inter-word;  /* Ensures proper spacing between words */
+    margin-bottom: 15px;       /* Adds spacing between paragraphs */
+}
+
+
 @media (max-width: 768px) {
   .about-me-content {
     flex-direction: column;  
