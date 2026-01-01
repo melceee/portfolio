@@ -9,80 +9,6 @@
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 
-  <style>
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 2000;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow-y: auto;
-      background-color: rgba(0,0,0,0.8);
-      padding: 40px 0;
-    }
-
-    .modal-content {
-      background-color: #1e293b;
-      margin: auto;
-      padding: 30px;
-      border-radius: 20px;
-      width: 90%;
-      max-width: 900px;
-      color: #f5f7fa;
-      position: relative;
-      max-height: 90vh;
-      overflow-y: auto;
-    }
-
-    .close {
-      color: #f5f7fa;
-      position: absolute;
-      top: 15px;
-      right: 20px;
-      font-size: 28px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    .close:hover {
-      color: #2563eb;
-    }
-
-    .modal-images {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      margin-top: 20px;
-    }
-
-    .modal-image-wrapper {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .modal-image-title {
-      margin-bottom: 10px;
-      font-weight: 600;
-      font-size: 1rem;
-      text-align: center;
-    }
-
-    .modal-images img {
-      max-width: 300px;
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    }
-
-    
-    .project-card {
-      cursor: pointer;
-    }
-  </style>
 </head>
 <body>
 
@@ -170,10 +96,8 @@
           learning and computer vision in healthcare diagnostics.
         </em></p>
         <p class="click-show-more">Click to show more</p>
-
       </div>
 
-      
       <div class="project-card" data-aos="fade-up">
         <h3>School Banking Application System</h3>
         <p class="project-role"><strong>Role:</strong> Software Developer (Academic Project)</p>
@@ -205,10 +129,8 @@
           a production banking system.
         </em></p>
         <p class="click-show-more">Click to show more</p>
-
       </div>
 
-      
       <div class="project-card" data-aos="fade-up">
         <h3>BookOn – Full-Stack Appointment Booking System</h3>
         <p class="project-role">
@@ -236,22 +158,20 @@
           Source code is not publicly available due to company confidentiality and NDA policies.
         </em></p>  
         <p class="click-show-more">Click to show more</p>
-
       </div>
+
     </div>
   </section>
 
   <section id="skills" data-aos="fade-up">
     <h2>Skills</h2>
     <div class="skills">
-      <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Vue.js</span><span>Responsive Web Design</span>
-      <span>Java</span><span>Spring Boot</span><span>RESTful API Development</span>
-      <span>C#</span><span>.NET Fundamentals</span>
-      <span>SQL</span><span>MySQL</span><span>Database Design</span>
-      <span>Authentication & Authorization</span><span>Password Hashing</span>
-      <span>Python</span><span>OpenCV</span><span>TensorFlow</span><span>CNN</span><span>Image Processing</span>
-      <span>Git</span><span>GitHub</span><span>Version Control</span>
-      <span>Problem Solving</span><span>Debugging</span><span>Agile Collaboration</span>
+      <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Vue.js</span>
+      <span>Java</span><span>Spring Boot</span><span>RESTful API</span>
+      <span>C#</span><span>.NET</span><span>SQL</span><span>MySQL</span>
+      <span>Python</span><span>OpenCV</span><span>TensorFlow</span><span>CNN</span>
+      <span>Git</span><span>GitHub</span><span>Debugging</span>
+      <span>Problem Solving</span><span>Agile Collaboration</span>
     </div>
   </section>
 
@@ -274,7 +194,6 @@
     <p>© 2025 Melchor S. Espinosa III</p>
   </footer>
 
-  
   <div id="projectModal" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
@@ -285,13 +204,11 @@
     </div>
   </div>
 
-  
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init({ duration: 1000 });
   </script>
 
- 
   <script>
     const modal = document.getElementById('projectModal');
     const modalTitle = document.getElementById('modal-title');
@@ -335,7 +252,6 @@
             {src: 'images/detection.jpg', title: 'Anemia Detection UI'},
             {src: 'images/results.jpg', title: 'Results'}
           ];
-
         } else if(title.includes('BookOn')) {
           images = [
             {src: 'images/service.png', title: 'Service Details'},
@@ -369,8 +285,6 @@
     closeBtn.onclick = () => modal.style.display = 'none';
     window.onclick = (e) => { if(e.target === modal) modal.style.display = 'none'; };
   </script>
-
-  
 
 </body>
 </html>
